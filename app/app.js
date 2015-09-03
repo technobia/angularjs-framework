@@ -10,8 +10,11 @@ function AngularConfig($routeProvider, $locationProvider) {
     });
 
     $routeProvider
-        .when('/admin', {
+        .when('/', {
             templateUrl: '/templates/login.html'
+        })
+        .when('/register', {
+            templateUrl: '/templates/register.html'
         })
         .otherwise({
             templateUrl: '/templates/index.html'
