@@ -11,14 +11,11 @@ function AngularConfig($routeProvider, $locationProvider) {
 
     $routeProvider
         .when('/', {
-            templateUrl: '/templates/login.html',
-            controllerUrl: '/app/controllers/LoginController'
+            templateUrl: '/templates/login.html'
         })
         .otherwise({
-            templateUrl: '/templates/login.html',
-            controllerUrl: '/app/controllers/LoginController'
-        })
-    ;
+            templateUrl: '/templates/login.html'
+        });
 
 }
 

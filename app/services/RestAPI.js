@@ -8,5 +8,11 @@ function RestAPI($http) {
         return response;
     });
 
+    this.save = function(body) {
+        $http.post('json/users.json', body).then(function(data) {
+            return data;
+        });
+    };
+
     return this;
 }
