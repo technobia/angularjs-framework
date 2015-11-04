@@ -1,22 +1,16 @@
-/**
- * Created by apium on 22/08/2015.
- */
-function BaseController($scope) {
-    this.data = $scope.data = {};
-    this.fn = $scope.fn = {};
-    this.event = $scope.event = {};
+define(function(require) {
+    'use strict';
 
-    this.event.onLoad = this.onLoad.bind(this);
+    function BaseController($scope) {
+        this.data = $scope.data = {};
+        this.event = $scope.event = {};
 
-    return this;
-}
+        this.event.onLoad = this.onLoad.bind(this);
+    }
 
-BaseController.prototype.onLoad = function() {
-    this.initData();
-};
+    BaseController.prototype.onLoad = function() {
 
-BaseController.prototype.initData = function() {
-    
-};
+    };
 
-app.controller('BaseController', BaseController);
+    return BaseController;
+});
